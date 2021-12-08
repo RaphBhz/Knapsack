@@ -25,3 +25,8 @@ class Knapsack:
               str(self.get_value_and_weight(objects_dict)[1]) + "/" + str(self.capacity))
 
         return
+
+    def copy(self):
+        copied = Knapsack(self.capacity)
+        copied.content.extend(self.content)
+        return copied
