@@ -2,7 +2,7 @@ import json
 import pytest
 
 from knapsack.Knapsack import Knapsack
-from solutions import solve_knapsack_greedy
+from solutions import solve_knapsack_greedy, solve_knapsack_optimal
 
 
 def get_small_objects_dict(capacity=60):
@@ -10,7 +10,8 @@ def get_small_objects_dict(capacity=60):
         "Épée de lumière lunaire": [909, 6],
         "Flèche incassable": [697, 5],
         "Grimoire résistant": [878, 6],
-        "Armure rutilante": [349, 14],        "Baguette du grincheux": [871, 8],
+        "Armure rutilante": [349, 14],
+        "Baguette du grincheux": [871, 8],
         "Bâton des chants d'oiseaux": [646, 6],
         "Bottes d'empreintes factices": [646, 1],
         "Bouclier expressif": [316, 13],
@@ -131,3 +132,9 @@ class TestGreedyMedium:
         assert filled_sack.get_value_and_weight(objects_dict) == (weight, value)
         if capacity > 5:
             assert "Oeil et Main de Vecna" in sack.content
+
+
+class TestOptimalSmall:
+    def test_solve(self):
+        pass
+

@@ -3,7 +3,7 @@ from knapsack.Knapsack import Knapsack
 
 def solve_knapsack_greedy(knapsack, objects_dict) -> Knapsack:
     assert(knapsack.content == [])
-    filled_sack = knapsack.copy()
+    filled_sack = knapsack # Test passe pas si copie (voir pour optimal)
 
     sorted_objects_dict = dict(sorted(objects_dict.items(), key=lambda x: x[1][0]/x[1][1], reverse=True))
     weight = 0
