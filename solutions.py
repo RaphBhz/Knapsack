@@ -34,23 +34,23 @@ def solve_knapsack_best(knapsack, objects_dict) -> Knapsack:
     objects_dict_iterated = objects_dict.copy()
     objects_dict_iterated = list(objects_dict_iterated.items())
 
-    value_matrix = knapsack_best_get_solution(knapsack, objects_dict, objects_dict_iterated)
+    value_matrix = knapsack_best_get_solution(knapsack.capacity, objects_dict_iterated)
     knapsack = knapsack_best_get_items(knapsack, value_matrix, objects_dict_iterated)
 
     return knapsack
 
 
-def knapsack_best_get_solution(knapsack, objects_dict, objects_dict_iterated):
-    value_matrix = [[0 for _ in range(knapsack.capacity + 1)] for _ in range(len(objects_dict_iterated))]
+def knapsack_best_get_solution(capacity, objects_dict_iterated):
+    value_matrix = [[0 for _ in range(capacity + 1)] for _ in range(len(objects_dict_iterated) + 1)]
 
-    for i in range(1, len(objects_dict.keys())):
+    for i in range(1, len(objects_dict_iterated)):
         value = objects_dict_iterated[i][1][0]
         weight = objects_dict_iterated[i][1][1]
 
-        for j in range(1, knapsack.capacity + 1):
+        for j in range(1, capacity + 1):
             value_matrix[i][j] = value_matrix[i - 1][j]
-            if j >= weight and value_matrix[j - 1][j - weight] + value > value_matrix[i][j]:
-                value_matrix[i][j] = value_matrix[j - 1][j - weight] + value
+            if j >= weight and value_matrix[i - 1][j - weight] + value > value_matrix[i][j]:
+                value_matrix[i][j] = value_matrix[i - 1][j - weight] + value
 
     return value_matrix
 
