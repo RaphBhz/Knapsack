@@ -2,7 +2,7 @@ import json
 import pytest
 
 from knapsack.Knapsack import Knapsack
-from solutions import solve_knapsack_greedy, solve_knapsack_optimal
+from solutions import solve_knapsack_greedy
 
 
 def get_small_objects_dict(capacity=60):
@@ -137,4 +137,3 @@ class TestGreedyMedium:
 class TestOptimalSmall:
     def test_solve(self):
         pass
-

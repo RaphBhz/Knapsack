@@ -20,9 +20,10 @@ class Knapsack:
             print(s + " " + str(objects_dict.get(s)[0]) + " " + str(objects_dict.get(s)[1]))
             count += 1
 
-        print("Le sac a " + str(count) + " objets, pour une valeur de " +
-              str(self.get_value_and_weight(objects_dict)[0]) + " et un poids de " +
-              str(self.get_value_and_weight(objects_dict)[1]) + "/" + str(self.capacity))
+        print("Le sac a",
+              str(count) + " objets, pour une valeur de",
+              str(self.get_value_and_weight(objects_dict)[0]),
+              "et un poids de " + str(self.get_value_and_weight(objects_dict)[1]) + "/" + str(self.capacity))
 
         return
 
