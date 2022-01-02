@@ -1,5 +1,6 @@
 # Knapsack
-![](https://www.aidedd.org/dnd/images-om/bag-of-devouring.jpg = 250x250)
+![]( | width=250)
+<img src="https://www.aidedd.org/dnd/images-om/bag-of-devouring.jpg" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="250" height="250" />
 
 This project is part of my 2021 university year's project list.
 
