@@ -11,7 +11,9 @@ The main asset of this solution is that it has a very low complexity of O(nlogn)
 efficient solution.
 
 ## 'Best' Solution
-This algorithm ...
+This algorithm puts our problem as a matrix and calculates the benefit of adding an item at every capacity. Like this, it uses the principle of dynamic programming to divide our
+problem in smaller ones and gives a global solution. We can then deduce the selected item from the matrix of values. This algorithm is not perfect but it has a reasonable time
+complexity of O(nW) n being the number of items available and W the capacity of our sack.
 
 ## Optimal Solution
 Finally, the optimal solution is the one that offers the real solution to our problem. It is capable of fiding the absolute perfect answer by considering all the possibilities
