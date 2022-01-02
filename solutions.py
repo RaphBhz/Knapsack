@@ -43,7 +43,7 @@ def solve_knapsack_best(knapsack, objects_dict) -> Knapsack:
 def knapsack_best_get_solution(capacity, objects_dict_iterated):
     value_matrix = [[0 for _ in range(capacity + 1)] for _ in range(len(objects_dict_iterated) + 1)]
 
-    for i in range(1, len(objects_dict_iterated)):
+    for i in range(0, len(objects_dict_iterated)):
         value = objects_dict_iterated[i][1][0]
         weight = objects_dict_iterated[i][1][1]
 
