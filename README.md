@@ -1,8 +1,9 @@
 # Knapsack
+![](https://www.aidedd.org/dnd/images-om/bag-of-devouring.jpg = 250x250)
+
 This project is part of my 2021 university year's project list.
 
 In this repository you will find three possible algorithm solutions for the famous Knapsack problem.
-![](https://www.aidedd.org/dnd/images-om/bag-of-devouring.jpg)
 
 ## Greedy
 The first solution is called the greedy solution. The items are ordered by their value / weight ratio. Then, the items with the best ratios are added until our knapsack is full.
